@@ -22,20 +22,20 @@ class _QrCodeScanState extends State<QrCodeScan> {
     } on PlatformException catch (ex) {
       if (ex.code == BarcodeScanner.CameraAccessDenied) {
         setState(() {
-          result = "Camera permission denied";
+          result = "Permiso de cámara denegado";
         });
       } else {
         setState(() {
-          result = "Unkown error $ex";
+          result = "Error desconocido: $ex";
         });
       }
     } on FormatException {
       setState(() {
-        result = "You pressed the back button before scanning anything";
+        result = "Presionaste el botón Atrás antes de escanear algo";
       });
     }catch(e){
       setState(() {
-          result = "Unkown error $e";
+          result = "Error desconocido: $e";
         });
     }
   }
@@ -45,7 +45,7 @@ class _QrCodeScanState extends State<QrCodeScan> {
     return Scaffold(
       floatingActionButton: FloatingActionButton.extended(
         onPressed: _scanQR,
-        label: Text("Scan"),
+        label: Text("Scan 2"),
         icon: Icon(Icons.camera_alt),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
