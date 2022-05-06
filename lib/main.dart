@@ -1,21 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:qr_scan_code/screens/home/home_screen.dart';
-import 'package:qr_scan_code/screens/qrscancode.dart';
+import 'package:get/get.dart';
+import 'routes/app_pages.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      // home: QrCodeScan(),
-      home: Homecreen(),
-    );
+    return GetMaterialApp(
+        title: "",
+        debugShowCheckedModeBanner: false,
+        initialRoute: "/",
+        getPages: AppPages.pages);
   }
 }

@@ -4,13 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:logger/logger.dart';
 import 'package:qr_scan_code/configs/logger.dart';
 
-class QrCodeScan extends StatefulWidget {
+class OrderScreen extends StatefulWidget {
   @override
-  _QrCodeScanState createState() => _QrCodeScanState();
+  _OrderScreenState createState() => _OrderScreenState();
 }
 
-class _QrCodeScanState extends State<QrCodeScan> {
-  Logger log = getLogger("QrCodeScan");
+class _OrderScreenState extends State<OrderScreen> {
+  Logger log = getLogger("OrderScreen");
   String result = "Waiting QR Scan Text";
   Future _scanQR() async {
     try {
@@ -50,7 +50,7 @@ class _QrCodeScanState extends State<QrCodeScan> {
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
       appBar: AppBar(
-        title: Text("Qr Scan Code"),
+        title: Text("SUPERPET"),
       ),
       body: Center(
           child: Text(
