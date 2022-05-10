@@ -1,8 +1,9 @@
 import 'package:get/route_manager.dart';
 import 'package:qr_scan_code/app/screens/carrier/carrier_binding.dart';
 import 'package:qr_scan_code/app/screens/carrier/carrier_screen.dart';
-import 'package:qr_scan_code/app/screens/home/home_binding.dart';
-import 'package:qr_scan_code/app/screens/home/home_screen.dart';
+import 'package:qr_scan_code/app/screens/login/login_binding.dart';
+import 'package:qr_scan_code/app/screens/login/login_screen.dart';
+import 'package:qr_scan_code/app/screens/order/order_binding.dart';
 import 'package:qr_scan_code/app/screens/order/order_screen.dart';
 
 import 'app_route.dart';
@@ -11,9 +12,9 @@ import 'app_route.dart';
 class AppPages {
   static final pages = [
     GetPage(
-      name: AppRoutes.HOME,
-      page: () => HomeScreen(),
-      binding: HomeBinding()
+      name: AppRoutes.LOGIN,
+      page: () => LoginScreen(),
+      binding: LoginBinding()
     ),
     GetPage(
       name: AppRoutes.CARRIER,
@@ -23,7 +24,7 @@ class AppPages {
     GetPage(
       name: AppRoutes.ORDER,
       page: () => OrderScreen(),
-      // binding: DetailsBinding()
+      // binding: OrderBinding()
     )
   ];
 }

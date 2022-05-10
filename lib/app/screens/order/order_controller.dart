@@ -1,13 +1,11 @@
 
 import 'package:get/get.dart';
 
-class HomeController extends GetxController{
+class OrderController extends GetxController{
 
-  // List<PokemonModel> pokemons = [];
 
   @override
   void onInit() {
-    _load();
     super.onInit();
   }
 
@@ -20,8 +18,4 @@ class HomeController extends GetxController{
   void onClose() {
     super.onClose();
   }
-
-  _load() async{
-  }
-
 }

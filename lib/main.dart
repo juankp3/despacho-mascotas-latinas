@@ -9,8 +9,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
         title: "",
+        theme: ThemeData(
+          primaryColor: Colors.red,
+          primarySwatch: Colors.red,
+        ),
         debugShowCheckedModeBanner: false,
         initialRoute: "/",
-        getPages: AppPages.pages);
+        getPages: AppPages.pages
+    );
   }
 }
